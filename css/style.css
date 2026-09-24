@@ -1,0 +1,95 @@
+/* Achadinhos da Moda — estilos (mobile-first, sem dependências externas) */
+:root {
+  --bg: #faf6f1;
+  --surface: #ffffff;
+  --text: #2b2320;
+  --muted: #6f625b;
+  --line: #e9dfd5;
+  --accent: #b5543c;
+  --accent-dark: #8f3f2b;
+  --accent-soft: #f5e3dc;
+  --ml: #2d3277;
+  --amz: #232f3e;
+  --radius: 14px;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 var(--sans); }
+img { max-width: 100%; display: block; }
+a { color: var(--accent-dark); }
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+.topo { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+.topo .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 12px; }
+.marca { font: 700 1.15rem/1 var(--serif); color: var(--text); text-decoration: none; letter-spacing: -.01em; white-space: nowrap; }
+.marca span { color: var(--accent); }
+.menu { display: flex; gap: 14px; font-size: .9rem; }
+.menu a { color: var(--muted); text-decoration: none; }
+.menu a:hover, .menu a[aria-current="page"] { color: var(--accent-dark); }
+
+.aviso-faixa { background: var(--accent-soft); color: var(--accent-dark); font-size: .8rem; text-align: center; padding: 6px 16px; }
+
+.hero { padding: 32px 0 12px; }
+.hero h1 { font: 700 clamp(1.75rem, 6vw, 2.6rem)/1.15 var(--serif); margin: 0 0 12px; letter-spacing: -.02em; }
+.hero p { color: var(--muted); margin: 0; max-width: 34em; }
+
+.filtros { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px 0 8px; }
+.filtros::-webkit-scrollbar { display: none; }
+.filtro { flex: 0 0 auto; border: 1px solid var(--line); background: var(--surface); color: var(--text); border-radius: 999px; padding: 8px 16px; font: 500 .9rem var(--sans); cursor: pointer; }
+.filtro[aria-pressed="true"] { background: var(--text); color: #fff; border-color: var(--text); }
+
+.grade { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 8px 0 32px; }
+@media (min-width: 720px) { .grade { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+@media (min-width: 980px) { .grade { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.card-img { aspect-ratio: 1 / 1; background: var(--accent-soft); display: grid; place-items: center; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; }
+.card-img .ph { font: 700 2.2rem var(--serif); color: var(--accent); opacity: .5; }
+.card-corpo { padding: 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.selo { align-self: flex-start; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #fff; padding: 2px 8px; border-radius: 6px; }
+.selo.ml { background: var(--ml); }
+.selo.amazon { background: var(--amz); }
+.card h3 { font-size: .95rem; line-height: 1.3; margin: 0; }
+.card p { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.45; }
+.preco { font-weight: 700; font-size: .95rem; }
+.preco small { display: block; font-weight: 400; color: var(--muted); font-size: .7rem; }
+.btn { margin-top: auto; display: block; text-align: center; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; font-size: .88rem; padding: 10px; border-radius: 10px; }
+.btn:hover { background: var(--accent-dark); }
+
+.vazio { grid-column: 1 / -1; text-align: center; padding: 40px 16px; background: var(--surface); border: 1px dashed var(--line); border-radius: var(--radius); color: var(--muted); }
+.vazio strong { display: block; color: var(--text); font: 700 1.2rem var(--serif); margin-bottom: 6px; }
+
+.secao { padding: 24px 0 8px; }
+.secao h2 { font: 700 1.4rem var(--serif); margin: 0 0 12px; }
+.guias { display: grid; gap: 12px; }
+@media (min-width: 720px) { .guias { grid-template-columns: repeat(2, 1fr); } }
+.guia { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; text-decoration: none; color: var(--text); }
+.guia span { font-size: .75rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+.guia h3 { font: 700 1.1rem/1.3 var(--serif); margin: 4px 0 6px; }
+.guia p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+.redes { display: flex; gap: 10px; flex-wrap: wrap; }
+.redes a { flex: 1 1 140px; text-align: center; padding: 12px; border-radius: 10px; text-decoration: none; border: 1px solid var(--text); color: var(--text); font-weight: 600; }
+
+.texto { max-width: 680px; padding: 20px 0 40px; }
+.texto h1 { font: 700 clamp(1.6rem, 5.5vw, 2.3rem)/1.2 var(--serif); margin: 0 0 8px; letter-spacing: -.01em; }
+.texto .meta { color: var(--muted); font-size: .85rem; margin-bottom: 24px; }
+.texto h2 { font: 700 1.3rem var(--serif); margin: 32px 0 8px; }
+.texto h3 { font-size: 1.05rem; margin: 22px 0 6px; }
+.texto ul, .texto ol { padding-left: 1.2em; }
+.texto li { margin-bottom: 6px; }
+.caixa { background: var(--accent-soft); border-radius: var(--radius); padding: 14px 16px; margin: 20px 0; font-size: .95rem; }
+.migalha { font-size: .82rem; color: var(--muted); padding-top: 16px; }
+.migalha a { color: var(--muted); }
+
+.rodape { background: var(--text); color: #d9cfc8; font-size: .82rem; padding: 28px 0; margin-top: 24px; }
+.rodape a { color: #fff; }
+.rodape p { margin: 0 0 10px; }
+.rodape nav { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+
+@media (max-width: 380px) { .menu { gap: 10px; font-size: .82rem; } .marca { font-size: 1rem; } }
