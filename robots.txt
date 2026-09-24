@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://achadinhosdamodastyle.github.io/sitemap.xml
