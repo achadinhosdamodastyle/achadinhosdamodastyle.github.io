@@ -10,8 +10,9 @@
   3. "loja": "ml" ou "amazon"   |   "categoria": "bolsas", "calcados", "roupas" ou "acessorios"
      (acessórios = cinto, óculos, lenço, chapéu, carteira... NUNCA joias ou relógios)
   4. "preco": texto livre (ex: "R$ 89,90"). Preço muda — o site já avisa isso ao lado.
-  5. "imagem": deixe "" (vazio). Não copie foto do anúncio: use foto sua, ou deixe vazio
-     que o site mostra um placeholder.
+  5. "imagem": link da foto no servidor oficial da loja (http2.mlstatic.com no ML,
+     m.media-amazon.com na Amazon). Não baixe e re-suba a foto: o site só exibe a
+     imagem direto da loja. Pode deixar "" (vazio) que aparece um placeholder.
 
   Exemplo (copie, tire as barras // do começo e preencha):
   // {
@@ -33,7 +34,7 @@ const PRODUTOS = [
     loja: "ml",
     categoria: "bolsas",
     link: "https://meli.la/2j97H5u",
-    imagem: ""
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_605892-MLA99934977359_112025-O.webp"
   },
   {
     nome: "Bolsa transversal com alça de mão Selten",
@@ -42,7 +43,7 @@ const PRODUTOS = [
     loja: "ml",
     categoria: "bolsas",
     link: "https://meli.la/1oyexUe",
-    imagem: ""
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_985380-MLA100012955611_122025-O.webp"
   },
   {
     nome: "Tênis branco feminino Vili",
@@ -51,6 +52,6 @@ const PRODUTOS = [
     loja: "ml",
     categoria: "calcados",
     link: "https://meli.la/2jChAH8",
-    imagem: ""
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_795481-MLB100773958822_122025-O.webp"
   }
 ];

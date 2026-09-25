@@ -21,12 +21,23 @@
     return e;
   }
 
+  // Só aceita foto servida pelos servidores oficiais das lojas (https)
+  function imagemValida(url) {
+    try {
+      const u = new URL(url);
+      return u.protocol === 'https:' && /(^|\.)(mlstatic\.com|media-amazon\.com|ssl-images-amazon\.com)$/.test(u.hostname);
+    } catch (e) { return false; }
+  }
+
   function card(p) {
     const c = el('article', 'card');
     const img = el('div', 'card-img');
-    if (p.imagem) {
+    if (imagemValida(p.imagem)) {
       const i = document.createElement('img');
       i.src = p.imagem; i.alt = p.nome; i.loading = 'lazy';
+      i.referrerPolicy = 'no-referrer';
+      // Se a loja trocar/remover a foto, volta pro placeholder em vez de mostrar imagem quebrada
+      i.onerror = function () { img.textContent = ''; img.appendChild(el('span', 'ph', 'A')); };
       img.appendChild(i);
     } else {
       img.appendChild(el('span', 'ph', 'A'));
