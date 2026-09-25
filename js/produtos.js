@@ -26,5 +26,31 @@
 */
 
 const PRODUTOS = [
-  // Nenhum produto ainda — os primeiros entram assim que os cadastros de afiliado forem aprovados.
+  {
+    nome: "Bolsa matelassê com alça de corrente",
+    descricao: "Transversal, em couro PU matelassê. Nota 4,8 com mais de 10 mil vendidas.",
+    preco: "R$ 68,68",
+    loja: "ml",
+    categoria: "bolsas",
+    link: "https://meli.la/2j97H5u",
+    imagem: ""
+  },
+  {
+    nome: "Bolsa transversal com alça de mão Selten",
+    descricao: "Usa no ombro ou na mão. Nota 4,8 com mais de 5 mil vendidas.",
+    preco: "R$ 57,99",
+    loja: "ml",
+    categoria: "bolsas",
+    link: "https://meli.la/1oyexUe",
+    imagem: ""
+  },
+  {
+    nome: "Tênis branco feminino Vili",
+    descricao: "Para caminhada, academia e dia a dia. Nota 4,8 com mais de 100 mil vendidos.",
+    preco: "R$ 78,06 no Pix",
+    loja: "ml",
+    categoria: "calcados",
+    link: "https://meli.la/2jChAH8",
+    imagem: ""
+  }
 ];
