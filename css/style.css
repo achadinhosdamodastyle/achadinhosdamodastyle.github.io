@@ -48,7 +48,8 @@ a { color: var(--accent-dark); }
 
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
 .card-img { aspect-ratio: 1 / 1; background: var(--accent-soft); display: grid; place-items: center; }
-.card-img img { width: 100%; height: 100%; object-fit: cover; }
+.card-img:has(img) { background: #fff; }
+.card-img img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
 .card-img .ph { font: 700 2.2rem var(--serif); color: var(--accent); opacity: .5; }
 .card-corpo { padding: 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .selo { align-self: flex-start; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #fff; padding: 2px 8px; border-radius: 6px; }
