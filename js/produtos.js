@@ -27,15 +27,7 @@
 */
 
 const PRODUTOS = [
-  {
-    nome: "Bolsa matelassê com alça de corrente",
-    descricao: "Transversal, em couro PU matelassê. Nota 4,8 com mais de 10 mil vendidas.",
-    preco: "R$ 68,68",
-    loja: "ml",
-    categoria: "bolsas",
-    link: "https://meli.la/2j97H5u",
-    imagem: "https://http2.mlstatic.com/D_NQ_NP_605892-MLA99934977359_112025-O.webp"
-  },
+  // O site mostra do ÚLTIMO para o primeiro: o produto do vídeo mais recente fica no fim da lista.
   {
     nome: "Bolsa transversal com alça de mão Selten",
     descricao: "Usa no ombro ou na mão. Nota 4,8 com mais de 5 mil vendidas.",
@@ -53,5 +45,14 @@ const PRODUTOS = [
     categoria: "calcados",
     link: "https://meli.la/2jChAH8",
     imagem: "https://http2.mlstatic.com/D_NQ_NP_795481-MLB100773958822_122025-O.webp"
+  },
+  {
+    nome: "Bolsa matelassê com alça de corrente",
+    descricao: "Transversal, em couro PU matelassê. Nota 4,8 com mais de 10 mil vendidas.",
+    preco: "R$ 68,68",
+    loja: "ml",
+    categoria: "bolsas",
+    link: "https://meli.la/2j97H5u",
+    imagem: "https://http2.mlstatic.com/D_NQ_NP_605892-MLA99934977359_112025-O.webp"
   }
 ];
