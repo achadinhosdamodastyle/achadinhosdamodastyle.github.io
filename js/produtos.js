@@ -32,8 +32,8 @@ const PRODUTOS = [
   // depois do número maior pro menor. Link direto de cada um: achadinhosdamodastyle.github.io/#p<número>
   {
     num: 1,
-    nome: "Bolsa matelassê com alça de corrente",
-    descricao: "Transversal, em couro PU matelassê. Nota 4,8 com mais de 10 mil vendidas.",
+    nome: "Bolsa matelassê com corrente",
+    descricao: "Nota 4,8 · +10 mil vendidas",
     preco: "R$ 68,68",
     loja: "ml",
     categoria: "bolsas",
@@ -43,7 +43,7 @@ const PRODUTOS = [
   {
     num: 2,
     nome: "Tênis branco feminino Vili",
-    descricao: "Para caminhada, academia e dia a dia. Nota 4,8 com mais de 100 mil vendidos.",
+    descricao: "Nota 4,8 · +100 mil vendidos",
     preco: "R$ 78,06 no Pix",
     loja: "ml",
     categoria: "calcados",
@@ -52,8 +52,8 @@ const PRODUTOS = [
   },
   {
     num: 3,
-    nome: "Bolsa transversal com alça de mão Selten",
-    descricao: "Usa no ombro ou na mão. Nota 4,8 com mais de 5 mil vendidas.",
+    nome: "Bolsa Selten ombro ou mão",
+    descricao: "Nota 4,8 · +5 mil vendidas",
     preco: "R$ 57,99",
     loja: "ml",
     categoria: "bolsas",
@@ -63,7 +63,7 @@ const PRODUTOS = [
   {
     num: 4,
     nome: "Bolsa de ombro Romantic Crown",
-    descricao: "Fecho magnético, cabe celular, chave e batom. Vem em caixa de presente. Nota 4,8.",
+    descricao: "Nota 4,8 · +300 vendidas no mês",
     preco: "R$ 69,11",
     loja: "amazon",
     categoria: "bolsas",
@@ -73,8 +73,8 @@ const PRODUTOS = [
   },
   {
     num: 5,
-    nome: "Bolsa transversal casual para o dia a dia",
-    descricao: "Nota 4,9 com mais de 10 mil vendidas.",
+    nome: "Bolsa transversal casual",
+    descricao: "Nota 4,9 · +10 mil vendidas",
     preco: "R$ 65,98",
     loja: "ml",
     categoria: "bolsas",
@@ -83,8 +83,8 @@ const PRODUTOS = [
   },
   {
     num: 6,
-    nome: "Bolsa transversal esportiva com chaveiro pompom",
-    descricao: "Pra academia e passeio. Nota 4,9 com mais de 10 mil vendidas.",
+    nome: "Bolsa esportiva com pompom",
+    descricao: "Nota 4,9 · +10 mil vendidas",
     preco: "R$ 56,99",
     loja: "ml",
     categoria: "bolsas",
@@ -93,8 +93,8 @@ const PRODUTOS = [
   },
   {
     num: 7,
-    nome: "Bolsa transversal pequena de ombro",
-    descricao: "Pequena, pra sair à noite. Nota 4,7 com mais de 10 mil vendidas.",
+    nome: "Bolsa pequena de ombro",
+    descricao: "Nota 4,7 · +10 mil vendidas",
     preco: "R$ 36,76",
     loja: "ml",
     categoria: "bolsas",
@@ -103,8 +103,8 @@ const PRODUTOS = [
   },
   {
     num: 8,
-    nome: "Bolsa transversal média baú",
-    descricao: "Modelo baú, tiracolo. Nota 4,9 com mais de 10 mil vendidas.",
+    nome: "Bolsa baú média",
+    descricao: "Nota 4,9 · +10 mil vendidas",
     preco: "R$ 76,62",
     loja: "ml",
     categoria: "bolsas",
@@ -114,7 +114,7 @@ const PRODUTOS = [
   {
     num: 9,
     nome: "Tênis ortopédico feminino",
-    descricao: "Pra academia, corrida e dia a dia. Nota 4,8 com mais de 10 mil vendidos.",
+    descricao: "Nota 4,8 · +10 mil vendidos",
     preco: "R$ 74,90",
     loja: "ml",
     categoria: "calcados",
@@ -124,7 +124,7 @@ const PRODUTOS = [
   {
     num: 10,
     nome: "Rasteirinha metalizada",
-    descricao: "Leve, pro verão. Nota 4,8 com mais de 5 mil vendidas.",
+    descricao: "Nota 4,8 · +5 mil vendidas",
     preco: "R$ 54,90",
     loja: "ml",
     categoria: "calcados",
@@ -134,7 +134,7 @@ const PRODUTOS = [
   {
     num: 11,
     nome: "Rasteirinha Moleca",
-    descricao: "Nota 4,8 com mais de 5 mil vendidas.",
+    descricao: "Nota 4,8 · +5 mil vendidas",
     preco: "R$ 46,00",
     loja: "ml",
     categoria: "calcados",
@@ -143,8 +143,8 @@ const PRODUTOS = [
   },
   {
     num: 12,
-    nome: "Tênis Vizzano casual sneaker",
-    descricao: "Tênis casual da Vizzano. Nota 4,6 na Amazon.",
+    nome: "Tênis Vizzano casual",
+    descricao: "Nota 4,6 · 239 avaliações",
     preco: "R$ 134,48",
     loja: "amazon",
     categoria: "calcados",
@@ -154,7 +154,7 @@ const PRODUTOS = [
   {
     num: 13,
     nome: "Sandália Vizzano salto bloco",
-    descricao: "Salto bloco baixo, confortável. Nota 4,8 na Amazon.",
+    descricao: "Nota 4,8 · 389 avaliações",
     preco: "R$ 69,46",
     loja: "amazon",
     categoria: "calcados",
@@ -163,8 +163,8 @@ const PRODUTOS = [
   },
   {
     num: 14,
-    nome: "Calça jeans wide leg cintura alta",
-    descricao: "Pantalona. Mais de 100 mil vendidas no Mercado Livre.",
+    nome: "Calça jeans wide leg",
+    descricao: "+100 mil vendidas",
     preco: "R$ 59,99",
     loja: "ml",
     categoria: "roupas",
@@ -174,7 +174,7 @@ const PRODUTOS = [
   {
     num: 15,
     nome: "Calça alfaiataria wide leg",
-    descricao: "Cintura alta, social. Nota 4,7 com mais de 11 mil avaliações.",
+    descricao: "Nota 4,7 · +100 mil vendidas",
     preco: "R$ 45,81",
     loja: "ml",
     categoria: "roupas",
@@ -184,7 +184,7 @@ const PRODUTOS = [
   {
     num: 16,
     nome: "Vestido midi com babados",
-    descricao: "Casual ou festa. Nota 4,9 com mais de 10 mil vendidos.",
+    descricao: "Nota 4,9 · +10 mil vendidos",
     preco: "R$ 97,74",
     loja: "ml",
     categoria: "roupas",
@@ -193,8 +193,8 @@ const PRODUTOS = [
   },
   {
     num: 17,
-    nome: "Vestido midi canelado com fenda",
-    descricao: "Básico, com manga. Nota 4,6.",
+    nome: "Vestido midi canelado",
+    descricao: "Nota 4,6 · +1 mil vendidos",
     preco: "R$ 32,00",
     loja: "ml",
     categoria: "roupas",
@@ -203,8 +203,8 @@ const PRODUTOS = [
   },
   {
     num: 18,
-    nome: "Camiseta Hering básica gola V",
-    descricao: "O básico que combina com tudo. Nota 4,6 na Amazon.",
+    nome: "Camiseta Hering gola V",
+    descricao: "Nota 4,6 · 329 avaliações",
     preco: "R$ 29,99",
     loja: "amazon",
     categoria: "roupas",
@@ -213,8 +213,8 @@ const PRODUTOS = [
   },
   {
     num: 19,
-    nome: "Óculos de sol Viale quadrado",
-    descricao: "Nota 4,8 com mais de 10 mil vendidos.",
+    nome: "Óculos de sol Viale",
+    descricao: "Nota 4,8 · +10 mil vendidos",
     preco: "R$ 69,30",
     loja: "ml",
     categoria: "acessorios",
@@ -224,7 +224,7 @@ const PRODUTOS = [
   {
     num: 20,
     nome: "Óculos de sol oval retrô",
-    descricao: "Estilo anos 2000. Mais de 5 mil vendidos.",
+    descricao: "+5 mil vendidos",
     preco: "R$ 37,99",
     loja: "ml",
     categoria: "acessorios",
@@ -233,8 +233,8 @@ const PRODUTOS = [
   },
   {
     num: 21,
-    nome: "Cinto de couro com fivela dourada",
-    descricao: "Couro legítimo. Nota 4,9.",
+    nome: "Cinto de couro fivela dourada",
+    descricao: "Nota 4,9 · +1 mil vendidos",
     preco: "R$ 48,99",
     loja: "ml",
     categoria: "acessorios",
@@ -244,7 +244,7 @@ const PRODUTOS = [
   {
     num: 22,
     nome: "Carteira pequena com zíper",
-    descricao: "Porta cartão e moedas. Nota 4,6 com mais de 5 mil vendidas.",
+    descricao: "Nota 4,6 · +5 mil vendidas",
     preco: "R$ 19,49",
     loja: "ml",
     categoria: "acessorios",
@@ -254,7 +254,7 @@ const PRODUTOS = [
   {
     num: 23,
     nome: "Chapéu bucket liso",
-    descricao: "Unissex. Nota 4,6 com mais de 1 mil avaliações na Amazon.",
+    descricao: "Nota 4,6 · +1 mil avaliações",
     preco: "R$ 39,90",
     loja: "amazon",
     categoria: "acessorios",
@@ -264,7 +264,7 @@ const PRODUTOS = [
   {
     num: 24,
     nome: "Lenço acetinado floral",
-    descricao: "Longo e leve, dá pra usar no cabelo, no pescoço ou na bolsa. Nota 4,7 na Amazon.",
+    descricao: "Nota 4,7 · 587 avaliações",
     preco: "R$ 65,14",
     loja: "amazon",
     categoria: "acessorios",
