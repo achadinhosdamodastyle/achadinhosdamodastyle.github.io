@@ -10,7 +10,7 @@
     try {
       const u = new URL(url);
       return u.protocol === 'https:' &&
-        /(^|\.)(amazon\.com\.br|amzn\.to|mercadolivre\.com\.br|mercadolivre\.com|meli\.la)$/.test(u.hostname);
+        /(^|\.)(amazon\.com\.br|amzn\.to|link\.amazon|mercadolivre\.com\.br|mercadolivre\.com|meli\.la)$/.test(u.hostname);
     } catch (e) { return false; }
   }
 
@@ -31,13 +31,15 @@
 
   function card(p) {
     const c = el('article', 'card');
+    if (Number.isInteger(p.num)) c.id = 'p' + p.num;
     const img = el('div', 'card-img');
+    if (Number.isInteger(p.num)) img.appendChild(el('span', 'num', 'nº ' + p.num));
     if (imagemValida(p.imagem)) {
       const i = document.createElement('img');
       i.src = p.imagem; i.alt = p.nome; i.loading = 'lazy';
       i.referrerPolicy = 'no-referrer';
       // Se a loja trocar/remover a foto, volta pro placeholder em vez de mostrar imagem quebrada
-      i.onerror = function () { img.textContent = ''; img.appendChild(el('span', 'ph', 'A')); };
+      i.onerror = function () { i.remove(); img.appendChild(el('span', 'ph', 'A')); };
       img.appendChild(i);
     } else {
       img.appendChild(el('span', 'ph', 'A'));
@@ -74,8 +76,28 @@
       grade.appendChild(v);
       return;
     }
-    lista.slice().reverse().forEach(p => grade.appendChild(card(p)));
+    // Produto do vídeo atual (destaque) primeiro; depois do número maior (mais novo) pro menor
+    lista.slice().sort((a, b) => (b.destaque ? 1 : 0) - (a.destaque ? 1 : 0) || (b.num || 0) - (a.num || 0))
+      .forEach(p => grade.appendChild(card(p)));
   }
+
+  // Link direto pro produto: achadinhosdamodastyle.github.io/#p7 rola até o nº 7 e destaca
+  function irParaProduto() {
+    const m = /^#p(\d{1,3})$/.exec(location.hash);
+    if (!m) return;
+    const alvo = document.getElementById('p' + m[1]);
+    if (!alvo) return;
+    document.querySelectorAll('.card.alvo').forEach(x => x.classList.remove('alvo'));
+    alvo.classList.add('alvo');
+    alvo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  window.addEventListener('hashchange', () => {
+    if (!document.getElementById('p' + location.hash.slice(2))) {
+      filtros.forEach(x => x.setAttribute('aria-pressed', x.dataset.cat === 'todos' ? 'true' : 'false'));
+      render('todos');
+    }
+    irParaProduto();
+  });
 
   filtros.forEach(b => b.addEventListener('click', () => {
     filtros.forEach(x => x.setAttribute('aria-pressed', 'false'));
@@ -84,4 +106,5 @@
   }));
 
   render('todos');
+  irParaProduto();
 })();
