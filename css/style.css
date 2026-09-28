@@ -47,7 +47,7 @@ a { color: var(--accent-dark); }
 @media (min-width: 980px) { .grade { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
-.card-img { aspect-ratio: 1 / 1; background: var(--accent-soft); display: grid; place-items: center; }
+.card-img { position: relative; aspect-ratio: 1 / 1; background: var(--accent-soft); display: grid; place-items: center; }
 .card-img:has(img) { background: #fff; }
 .card-img img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
 .card-img .ph { font: 700 2.2rem var(--serif); color: var(--accent); opacity: .5; }
@@ -94,3 +94,10 @@ a { color: var(--accent-dark); }
 .rodape nav { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
 
 @media (max-width: 380px) { .menu { gap: 10px; font-size: .82rem; } .marca { font-size: 1rem; } }
+
+/* Número do achado (o vídeo diz "é o nº 7 no site") */
+.num { position: absolute; top: 8px; left: 8px; z-index: 1; background: var(--accent); color: #fff; font-size: .75rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
+.card { scroll-margin-top: 90px; }
+.card.alvo { outline: 3px solid var(--accent); outline-offset: 2px; animation: pisca 1.2s ease 2; }
+@keyframes pisca { 50% { outline-color: transparent; } }
+@media (prefers-reduced-motion: reduce) { .card.alvo { animation: none; } }
