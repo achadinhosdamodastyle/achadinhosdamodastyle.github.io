@@ -17,58 +17,107 @@
   <header class="topo">
     <div class="wrap">
       <a class="marca" href="./">Achadinhos <span>da Moda</span></a>
-      <nav class="menu">
+      <nav class="menu" aria-label="Principal">
         <a href="./" aria-current="page">Achados</a>
         <a href="guias/">Guias</a>
         <a href="sobre.html">Sobre</a>
+        <a class="menu-cta" href="https://www.instagram.com/achadinhosdamodastyle/" target="_blank" rel="noopener">Siga no Instagram</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <h1>Moda bonita com preço de achadinho.</h1>
-      <p>Bolsas, calçados, roupas e acessórios garimpados no Mercado Livre e na Amazon. Tudo que aparece nos vídeos fica aqui, com o link certinho.</p>
-    </section>
-
-    <div class="filtros" role="group" aria-label="Filtrar por categoria">
-      <button class="filtro" data-cat="todos" aria-pressed="true">Todos</button>
-      <button class="filtro" data-cat="bolsas" aria-pressed="false">Bolsas</button>
-      <button class="filtro" data-cat="calcados" aria-pressed="false">Calçados</button>
-      <button class="filtro" data-cat="roupas" aria-pressed="false">Roupas</button>
-      <button class="filtro" data-cat="acessorios" aria-pressed="false">Acessórios</button>
+  <main>
+    <div class="wrap">
+      <section class="hero-home">
+        <div>
+          <span class="eyebrow">Mercado Livre e Amazon</span>
+          <h1 class="hero-titulo">Moda bonita com preço de achadinho.</h1>
+          <p class="hero-texto">Bolsas, calçados, roupas e acessórios com nota alta e milhares de vendas. Viu no vídeo? Procure pelo número do produto e vá direto pra loja.</p>
+          <div class="hero-acoes">
+            <a class="botao botao-primario" href="#achados">Ver os achados</a>
+            <a class="botao botao-secundario" href="guias/">Guias de compra</a>
+          </div>
+          <ul class="numeros">
+            <li><strong id="total-achados">24</strong><span>achados no ar</span></li>
+            <li><strong>4,5+</strong><span>nota mínima</span></li>
+            <li><strong>2</strong><span>lojas oficiais</span></li>
+          </ul>
+        </div>
+        <div class="colagem" id="colagem" aria-label="Achados em destaque"></div>
+      </section>
     </div>
 
-    <section id="grade" class="grade" aria-live="polite"></section>
-
-    <section class="secao">
-      <h2>Guias pra comprar sem erro</h2>
-      <div class="guias">
-        <a class="guia" href="guias/como-comprar-bolsa-online.html">
-          <span>Bolsas</span>
-          <h3>Como comprar bolsa pela internet sem se arrepender</h3>
-          <p>7 coisas pra conferir no anúncio antes de clicar em "comprar".</p>
-        </a>
-        <a class="guia" href="guias/numeracao-de-calcados.html">
-          <span>Calçados</span>
-          <h3>Como acertar a numeração comprando calçado online</h3>
-          <p>O jeito de medir o pé em casa e ler a tabela de medidas do anúncio.</p>
-        </a>
+    <div class="barra-filtros" id="achados">
+      <div class="wrap">
+        <div class="filtros" role="group" aria-label="Filtrar por categoria">
+          <button class="filtro" data-cat="todos" aria-pressed="true">Todos</button>
+          <button class="filtro" data-cat="bolsas" aria-pressed="false">Bolsas</button>
+          <button class="filtro" data-cat="calcados" aria-pressed="false">Calçados</button>
+          <button class="filtro" data-cat="roupas" aria-pressed="false">Roupas</button>
+          <button class="filtro" data-cat="acessorios" aria-pressed="false">Acessórios</button>
+        </div>
+        <div class="busca" role="search">
+          <label class="sr-only" for="busca">Buscar achado por número ou nome</label>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="busca" type="search" inputmode="search" placeholder="Buscar pelo nº ou nome" autocomplete="off">
+        </div>
       </div>
-    </section>
+    </div>
 
-    <section class="secao">
-      <h2>Veja os achados em vídeo</h2>
-      <div class="redes">
-        <a href="https://www.instagram.com/achadinhosdamodastyle/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.tiktok.com/@achadinhosdamodastyle" target="_blank" rel="noopener">TikTok</a>
-      </div>
-    </section>
+    <div class="wrap">
+      <p class="sr-only" id="status-busca" aria-live="polite"></p>
+      <section id="grade" class="grade" aria-label="Achados"></section>
+
+      <section class="confianca" aria-label="Como escolhemos">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6-4.5-4.2 6.1-.7z"/></svg>
+          <div><h3>Só nota alta</h3><p>Entra no site só produto com nota 4,5 ou mais e muita gente que já comprou.</p></div>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.4 3.4 8.2 8 9 4.6-.8 8-4.6 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div><h3>Compra segura</h3><p>Você compra direto no Mercado Livre ou na Amazon, com a garantia e a troca da loja.</p></div>
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+          <div><h3>Revisado toda semana</h3><p>Preço e nota são conferidos toda semana. O que piora sai da lista.</p></div>
+        </div>
+      </section>
+
+      <section class="secao">
+        <div class="secao-topo">
+          <h2>Guias pra comprar sem erro</h2>
+          <a href="guias/">Ver todos →</a>
+        </div>
+        <div class="guias">
+          <a class="guia" href="guias/como-comprar-bolsa-online.html">
+            <span>Bolsas</span>
+            <h3>Como comprar bolsa pela internet sem se arrepender</h3>
+            <p>7 coisas pra conferir no anúncio antes de clicar em "comprar".</p>
+          </a>
+          <a class="guia" href="guias/numeracao-de-calcados.html">
+            <span>Calçados</span>
+            <h3>Como acertar a numeração comprando calçado online</h3>
+            <p>O jeito de medir o pé em casa e ler a tabela de medidas do anúncio.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="chamada">
+        <div>
+          <h2>Achado novo todo dia em vídeo</h2>
+          <p>Comente ACHADOS em qualquer vídeo que a gente te manda o link do produto.</p>
+        </div>
+        <div class="redes">
+          <a href="https://www.instagram.com/achadinhosdamodastyle/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
+          <a href="https://www.tiktok.com/@achadinhosdamodastyle" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.8 2.3 4.5 5 5"/></svg>TikTok</a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="rodape">
     <div class="wrap">
-      <nav><a href="./">Achados</a><a href="guias/">Guias</a><a href="sobre.html">Sobre e transparência</a></nav>
+      <nav aria-label="Rodapé"><a href="./">Achados</a><a href="guias/">Guias</a><a href="sobre.html">Sobre e transparência</a></nav>
       <p>Este site contém links de afiliado do Mercado Livre e da Amazon. Se você comprar por eles, posso receber uma comissão, sem nenhum custo extra pra você.</p>
       <p>Como participante do Programa de Associados da Amazon, sou remunerado pelas compras qualificadas efetuadas.</p>
       <p>Preços e disponibilidade podem mudar a qualquer momento. Vale sempre o que está na página da loja.</p>
